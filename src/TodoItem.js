@@ -1,9 +1,8 @@
-function TodoItem(prom) {
+function TodoItem({ text, complete }) {
     return (
         <li>
-            {prom.item}
             <span>V</span>
-            <p>Llorar con la llorona</p>
+            <p>{text}</p>
             <span>X</span>
         </li>
     );

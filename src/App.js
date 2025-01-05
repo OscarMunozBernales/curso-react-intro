@@ -1,11 +1,9 @@
-import logo from './platzi.webp';
-import './App.css';
-import { TodoCounter } from './TodoCounter';
-import { TodoSearch } from './TodoSearch';
-import { TodoList } from './TodoList';
-import { TodoItem } from './TodoItem';
-import { CreateTodoButton } from './CreateTodoButton';
 import React from 'react';
+import { TodoCounter } from './components/todo-counter/TodoCounter';
+import { TodoSearch } from './components/todo-search/TodoSearch';
+import { TodoList } from './components/todo-list/TodoList';
+import { TodoItem } from './components/todo-items/TodoItem';
+import { TodoCreate } from './components/todo-create/todo-create';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -18,11 +16,11 @@ const defaultTODO = [
 function App() {
   // console.log("🚀 ~ defaultTODO:", defaultTODO)
   const total = 10000;
-  const completado = 3;
+  const completed = 3;
   return (
-    <React.Fragment>
+    <>
 
-      <TodoCounter complete={completado} total={total} />
+      <TodoCounter completed={completed} total={total} />
 
       <TodoSearch />
 
@@ -37,9 +35,9 @@ function App() {
       </TodoList>
 
 
-      <CreateTodoButton />
+      <TodoCreate />
 
-    </React.Fragment>
+    </>
   );
 }
 
